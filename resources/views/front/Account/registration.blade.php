@@ -41,17 +41,17 @@
 @section('custom-js')
 @csrf
 <script>
- $(#registrationform).submit(function)(e){
+ $("#registrationform").submit(function(e){
      e.preventDefault();
      $.ajax({
-         url: '{{ route('account.processregistration') }}',
+         url: '{{ route("account.processregistration") }}',
          type: 'POST',
-         data: $(#registrationform).serializeArray(),
+         data: $("#registrationform").serializeArray(),
          dataType: 'json',
          success: function(response){
 
          }
  });
- }
+ });
 </script>
 @endsection
